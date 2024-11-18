@@ -6,8 +6,6 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     lateinit var inputAmount: EditText
@@ -29,5 +27,40 @@ class MainActivity : AppCompatActivity() {
         tip = findViewById(R.id.calculatedTip)
         total = findViewById(R.id.calculatedTotal)
         percent = findViewById(R.id.percent)
+
+
+        tip.setOnClickListener {
+
+        }
+        slider.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+                checkSeek(p1)
+            }
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {}
+
+            override fun onStopTrackingTouch(p0: SeekBar?) {}
+
+        })
     }
+
+    fun checkSeek(progress: Int) {
+        percent.text = progress.toString() + "%"
+        if (progress <= 9) {
+
+        }
+        else if (progress <= 15) {
+
+        }
+        else if (progress <= 20) {
+
+        }
+        else if (progress <= 25) {
+
+        }
+        else {
+
+        }
+    }
+
 }
