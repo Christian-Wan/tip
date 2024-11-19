@@ -27,7 +27,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="-10dp"
         android:hint="amount"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="@id/bill"
         app:layout_constraintStart_toStartOf="@id/guideline" />
 
@@ -111,7 +111,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Quality"
+        android:text="Ok"
+        android:textColor="@color/lime"
         app:layout_constraintBottom_toBottomOf="@+id/tipQuality"
         app:layout_constraintStart_toStartOf="@+id/guideline" />
 
