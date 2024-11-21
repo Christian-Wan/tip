@@ -30,9 +30,6 @@ class MainActivity : AppCompatActivity() {
         percent = findViewById(R.id.percent)
 
 
-        tip.setOnClickListener {
-
-        }
 
         inputAmount.addTextChangedListener {
             calculate(inputAmount.text.toString(), slider.progress)
@@ -48,6 +45,10 @@ class MainActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(p0: SeekBar?) {}
 
         })
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
 
 
